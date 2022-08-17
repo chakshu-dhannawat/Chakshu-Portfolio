@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Classification on Chakshu Dhannawat</title>
+    <link>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/tags/classification/</link>
+    <description>Recent content in Classification on Chakshu Dhannawat</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/tags/classification/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Quantum Machine Learning</title>
+      <link>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-4/</guid>
+      <description>This Project was a research based project which I did under the supervision of Dr. V.Narayan and Dr. Subashish Banerjee, IIT Jodhpur. I found the field of quantum computing really intriguing. Especially, with the recent algorithms which have come up. This project aimed at performing machine learning and solving tasks using quantum computing algorithms. Learnt about IBM&amp;rsquo;s qiskit library used for quantum computing tasks in python.
+ Integrating Quantum Computing and Machine Learning to create a qubit based classifier.</description>
+    </item>
+    
+    <item>
+      <title>Retinal Image Analysis</title>
+      <link>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-1/</guid>
+      <description>Did this project under the guidance of Professor Dr. Anil Kumar Tiwari from IIT Jodhpur. The motivation of this project was to create a software which would assist in automated detection of retinal diseases taking the images of the retinas as input.
+ Led a team of 3 members and implemented various deep learning algorithms related to Hypertensive Retinopathy detection. Implemented Retinal Vessel Segmentation and worked on image enhancement algorithms. Analyzed differentImage Classification models like VGG16, ResNet50, for detecting diseases from the images of the retinas.</description>
+    </item>
+    
+    <item>
+      <title>Toxic Comment Classification</title>
+      <link>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-2/</guid>
+      <description>This was a course project under the Guidance of Dr. Richa Singh, IIT Jodhpur. I learnt a lot of things related to natural language processing like stemming, vectorizaation, large language transformer models etc. I have also deployed the model using Heroku. You can check out the following link. :)
+
+ Led a team of 3 members and worked on Classifying Toxic Comments. Analysed various NLP techniques like Stemming, Lemmatization and Vectorization.</description>
+    </item>
+    
+  </channel>
+</rss>

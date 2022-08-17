@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Language Model on Chakshu Dhannawat</title>
+    <link>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/tags/language-model/</link>
+    <description>Recent content in Language Model on Chakshu Dhannawat</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/tags/language-model/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ML-Experimentation</title>
+      <link>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-7/</guid>
+      <description>This is also not a project, but instead a collection of google colab notebooks, where I try to test the recenly released machine learning models such as DALLE-2, Imagen, Language models such as BLOOM,GPT-3 etc. I will be adding many more google colab files into this github repository in the future. This repository contains the experimentation that I will perform on the recent advancements in AI. Mostly related to the recent research papers released in the community, and the machine learning models that have become quite popular.</description>
+    </item>
+    
+  </channel>
+</rss>

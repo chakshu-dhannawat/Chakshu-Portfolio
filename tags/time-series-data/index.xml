@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Time-Series-Data on Chakshu Dhannawat</title>
+    <link>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/tags/time-series-data/</link>
+    <description>Recent content in Time-Series-Data on Chakshu Dhannawat</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/tags/time-series-data/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bitcoin Price Prediction</title>
+      <link>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-3/</guid>
+      <description>I was interested in algorithmic trading, and thus started tish project to understand how well Machine Learning can be used to predict future values of stocks/cryptocurrency. This project involved implementing various algorithms for predicting future prizes of Bitcoin. Since Bitcoin price is volatile and has a lot of variation, I was not able to get good results at first, but after using models having complex architecture, and having attention mechanisms, I was able to develop models which gave good results.</description>
+    </item>
+    
+  </channel>
+</rss>

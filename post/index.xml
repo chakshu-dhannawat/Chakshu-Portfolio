@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Chakshu Dhannawat</title>
+    <link>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/</link>
+    <description>Recent content in Projects on Chakshu Dhannawat</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>3D-Reconstruction</title>
+      <link>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-6/</guid>
+      <description>This is not a finished project, instead something which I have worked on. I had researched various algorithms for 3d reconstruction. The different algorithms implemented were:
+ NeRF, Used multiple 2d images of a object and also the camera angles/poses at which the 2d images were captured to generate a single 3d object. PIFuHD from facebook. Used to create 3d models from single human images.  You can find more similar repositories on my github profile.</description>
+    </item>
+    
+    <item>
+      <title>Bitcoin Price Prediction</title>
+      <link>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-3/</guid>
+      <description>I was interested in algorithmic trading, and thus started tish project to understand how well Machine Learning can be used to predict future values of stocks/cryptocurrency. This project involved implementing various algorithms for predicting future prizes of Bitcoin. Since Bitcoin price is volatile and has a lot of variation, I was not able to get good results at first, but after using models having complex architecture, and having attention mechanisms, I was able to develop models which gave good results.</description>
+    </item>
+    
+    <item>
+      <title>ML-Experimentation</title>
+      <link>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-7/</guid>
+      <description>This is also not a project, but instead a collection of google colab notebooks, where I try to test the recenly released machine learning models such as DALLE-2, Imagen, Language models such as BLOOM,GPT-3 etc. I will be adding many more google colab files into this github repository in the future. This repository contains the experimentation that I will perform on the recent advancements in AI. Mostly related to the recent research papers released in the community, and the machine learning models that have become quite popular.</description>
+    </item>
+    
+    <item>
+      <title>Multithreaded-Server Perfromance Evaluation</title>
+      <link>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-5/</guid>
+      <description>This was a course project under Dr. Suchetana Chakraborty, IIT Jodhpur. Although this is not relevant to Machine Learning, but this project taught me many necessary lessons. I learnt about various ways in which servers work, different scheduling policies and ways in which they affect server performance.
+This may be helpful while designing large api&amp;rsquo;s or deploying machine learning models on servers, As we need to handle multiple requests at a single time, thus ensuring the most optimal server architecture will be able to handle more users.</description>
+    </item>
+    
+    <item>
+      <title>Quantum Machine Learning</title>
+      <link>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-4/</guid>
+      <description>This Project was a research based project which I did under the supervision of Dr. V.Narayan and Dr. Subashish Banerjee, IIT Jodhpur. I found the field of quantum computing really intriguing. Especially, with the recent algorithms which have come up. This project aimed at performing machine learning and solving tasks using quantum computing algorithms. Learnt about IBM&amp;rsquo;s qiskit library used for quantum computing tasks in python.
+ Integrating Quantum Computing and Machine Learning to create a qubit based classifier.</description>
+    </item>
+    
+    <item>
+      <title>Retinal Image Analysis</title>
+      <link>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-1/</guid>
+      <description>Did this project under the guidance of Professor Dr. Anil Kumar Tiwari from IIT Jodhpur. The motivation of this project was to create a software which would assist in automated detection of retinal diseases taking the images of the retinas as input.
+ Led a team of 3 members and implemented various deep learning algorithms related to Hypertensive Retinopathy detection. Implemented Retinal Vessel Segmentation and worked on image enhancement algorithms. Analyzed differentImage Classification models like VGG16, ResNet50, for detecting diseases from the images of the retinas.</description>
+    </item>
+    
+    <item>
+      <title>Toxic Comment Classification</title>
+      <link>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-2/</guid>
+      <description>This was a course project under the Guidance of Dr. Richa Singh, IIT Jodhpur. I learnt a lot of things related to natural language processing like stemming, vectorizaation, large language transformer models etc. I have also deployed the model using Heroku. You can check out the following link. :)
+
+ Led a team of 3 members and worked on Classifying Toxic Comments. Analysed various NLP techniques like Stemming, Lemmatization and Vectorization.</description>
+    </item>
+    
+  </channel>
+</rss>

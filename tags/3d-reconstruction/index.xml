@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3D-Reconstruction on Chakshu Dhannawat</title>
+    <link>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/tags/3d-reconstruction/</link>
+    <description>Recent content in 3D-Reconstruction on Chakshu Dhannawat</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/tags/3d-reconstruction/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>3D-Reconstruction</title>
+      <link>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-6/</guid>
+      <description>This is not a finished project, instead something which I have worked on. I had researched various algorithms for 3d reconstruction. The different algorithms implemented were:
+ NeRF, Used multiple 2d images of a object and also the camera angles/poses at which the 2d images were captured to generate a single 3d object. PIFuHD from facebook. Used to create 3d models from single human images.  You can find more similar repositories on my github profile.</description>
+    </item>
+    
+  </channel>
+</rss>

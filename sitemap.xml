@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/tags/3d-reconstruction/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-6/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/about/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/tags/apis/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-3/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/categories/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/tags/classification/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/tags/cnn/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/tags/computer-vision/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/contact/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/tags/database-management/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/tags/forecasting/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/tags/image-segmentation/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/tags/language-model/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-7/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-5/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/tags/natural-language-processing/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/tags/prediction/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/tags/quantum-computing/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-4/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/tags/research/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-1/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/tags/server-performance/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/tags/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/tags/time-series-data/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-2/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>
