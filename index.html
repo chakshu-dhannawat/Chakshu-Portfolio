@@ -1,343 +1,697 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
-    <title>Hey there! | Chakshu Dhannawat</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="I am Chakshu, Welcome to my portfolio website.">
-    <meta name="generator" content="Hugo 0.71.0" />
-    
-    
-    
-    
-      <meta name="robots" content="noindex, nofollow">
-    
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chakshu Dhannawat — AI Engineer</title>
+  <meta name="description" content="AI Engineer building intelligent systems — from RAG pipelines to fine-tuned LLMs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-    
-<link rel="stylesheet" href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/ananke/css/main.min.css" >
+    :root {
+      --bg: #0b1221;
+      --bg-elevated: #111d32;
+      --bg-card: #0f1929;
+      --text: #ccd6e0;
+      --text-bright: #e6edf5;
+      --text-muted: #6b7f99;
+      --accent: #5eead4;
+      --accent-dim: rgba(94, 234, 212, 0.08);
+      --accent-mid: rgba(94, 234, 212, 0.15);
+      --border: rgba(94, 234, 212, 0.06);
+      --serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+      --mono: 'DM Mono', 'SF Mono', 'Fira Code', monospace;
+    }
 
+    html { scroll-behavior: smooth; scrollbar-color: var(--bg-elevated) var(--bg); }
+    body {
+      font-family: var(--serif);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
 
+    ::selection { background: var(--accent); color: var(--bg); }
 
-    
-    
-    
-      
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    a:hover { opacity: 0.75; }
 
-    
+    /* --- NAV --- */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 1.25rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+      background: rgba(11, 18, 33, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+    nav.hidden { transform: translateY(-100%); }
+    nav .logo {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    nav ul { list-style: none; display: flex; gap: 2rem; }
+    nav ul li a {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      transition: color 0.25s;
+      position: relative;
+    }
+    nav ul li a::after {
+      content: '';
+      position: absolute; bottom: -4px; left: 0;
+      width: 0; height: 1px;
+      background: var(--accent);
+      transition: width 0.3s ease;
+    }
+    nav ul li a:hover { color: var(--accent); opacity: 1; }
+    nav ul li a:hover::after { width: 100%; }
 
-    
-    
-      <link href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/index.xml" rel="alternate" type="application/rss+xml" title="Chakshu Dhannawat" />
-      <link href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/index.xml" rel="feed" type="application/rss+xml" title="Chakshu Dhannawat" />
-      
-    
-    
-    <meta property="og:title" content="Hey there!" />
-<meta property="og:description" content="I am Chakshu, Welcome to my portfolio website." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/" />
-<meta property="og:updated_time" content="2017-03-02T12:00:00-05:00" /><meta property="og:site_name" content="Chakshu Dhannawat" />
-<meta itemprop="name" content="Hey there!">
-<meta itemprop="description" content="I am Chakshu, Welcome to my portfolio website."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Hey there!"/>
-<meta name="twitter:description" content="I am Chakshu, Welcome to my portfolio website."/>
+    /* --- LAYOUT --- */
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 2rem; }
+    section { padding: 7rem 0; }
 
-	
-  </head>
+    .section-label {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1; height: 1px;
+      background: linear-gradient(90deg, var(--accent-mid), transparent);
+    }
 
-  <body class="ma0 avenir bg-near-white">
+    /* --- HERO --- */
+    #hero {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      padding-top: 5rem;
+    }
+    .hero-inner {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s ease forwards 0.2s;
+    }
+    .hero-greeting {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      margin-bottom: 1.5rem;
+    }
+    .hero-name {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 6.5vw, 5rem);
+      font-weight: 400;
+      color: var(--text-bright);
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+    .hero-title {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+      font-weight: 300;
+      color: var(--text-muted);
+      line-height: 1.2;
+      margin-bottom: 2rem;
+    }
+    .hero-tagline {
+      max-width: 540px;
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+    .hero-links { display: flex; gap: 1.5rem; align-items: center; }
+    .hero-links a {
+      color: var(--text-muted);
+      transition: color 0.25s, transform 0.25s;
+      display: flex; align-items: center;
+    }
+    .hero-links a:hover { color: var(--accent); opacity: 1; transform: translateY(-2px); }
+    .hero-links svg { width: 22px; height: 22px; }
 
-    
+    /* --- ABOUT --- */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .about-text p { margin-bottom: 1.2rem; color: var(--text); }
+    .about-text strong { color: var(--text-bright); font-weight: 500; }
+    .about-highlights {
+      display: flex; flex-direction: column; gap: 1.5rem;
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: var(--bg-card);
+    }
+    .highlight-item {
+      display: flex; align-items: baseline; gap: 0.75rem;
+    }
+    .highlight-item .num {
+      font-family: var(--mono);
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--accent);
+      line-height: 1;
+      min-width: 60px;
+    }
+    .highlight-item .label {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
 
-  
-  <header class="cover bg-top" style="background-image: url('https://chakshu-dhannawat.github.io/Chakshu-Portfolio/images/homepage_network.jpg');">
-    <div class="bg-black-60">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/" class="f3 fw2 hover-white no-underline white-90 dib">
-      
-        Chakshu Dhannawat
-      
-    </a>
-    <div class="flex-l items-center">
-      
+    /* --- EXPERIENCE --- */
+    .timeline { position: relative; }
+    .timeline::before {
+      content: '';
+      position: absolute; left: 0; top: 0; bottom: 0;
+      width: 1px;
+      background: linear-gradient(180deg, var(--accent-mid), var(--border), transparent);
+    }
+    .timeline-item {
+      position: relative;
+      padding-left: 3rem;
+      padding-bottom: 3.5rem;
+    }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-item::before {
+      content: '';
+      position: absolute; left: -4px; top: 8px;
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 2px solid var(--accent);
+      transition: background 0.3s;
+    }
+    .timeline-item:hover::before { background: var(--accent); }
+    .timeline-header {
+      display: flex; justify-content: space-between; align-items: baseline;
+      flex-wrap: wrap; gap: 0.5rem;
+      margin-bottom: 0.6rem;
+    }
+    .timeline-role {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--text-bright);
+    }
+    .timeline-role .company { color: var(--accent); }
+    .timeline-date {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+    .timeline-location {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-bottom: 0.8rem;
+    }
+    .timeline-bullets { list-style: none; }
+    .timeline-bullets li {
+      position: relative;
+      padding-left: 1.2rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+    .timeline-bullets li::before {
+      content: '\25B8';
+      position: absolute; left: 0; top: 0;
+      color: var(--accent);
+      font-size: 0.75rem;
+    }
 
-      
-        <ul class="pl0 mr3">
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/about/" title="About page">
-              About
-            </a>
-          </li>
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/contact/" title="Contact page">
-              Contact
-            </a>
-          </li>
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/" title="Projects page">
-              Projects
-            </a>
-          </li>
-          
-        </ul>
-      
-      
-<div class="ananke-socials">
-  
-    <a href="https://www.linkedin.com/in/chakshu-dhannawat/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
-      
-        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
-</svg>
-</span>
-      
-<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
-<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
-</svg>
-</span></a>
-  
-    <a href="https://github.com/chakshu-dhannawat" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
-      
-        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
-  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
-</svg>
-</span>
-      
-<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
-<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
-</svg>
-</span></a>
-  
-</div>
+    /* --- PROJECTS --- */
+    .project-card {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      background: var(--bg-card);
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+    .project-card:hover {
+      border-color: var(--accent-mid);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    }
+    .project-top {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+    .project-year {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+    }
+    .project-link a {
+      color: var(--text-muted);
+      transition: color 0.25s;
+    }
+    .project-link a:hover { color: var(--accent); opacity: 1; }
+    .project-link svg { width: 18px; height: 18px; }
+    .project-name {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--text-bright);
+      margin-bottom: 0.8rem;
+    }
+    .project-desc {
+      font-size: 0.95rem;
+      color: var(--text);
+      margin-bottom: 1.2rem;
+      line-height: 1.75;
+    }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .project-tags span {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.05em;
+      padding: 0.3rem 0.7rem;
+      background: var(--accent-dim);
+      color: var(--accent);
+      border-radius: 3px;
+    }
 
-    </div>
-  </div>
-</nav>
+    /* --- SKILLS --- */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    .skill-group h3 {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .skill-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .skill-pills span {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      padding: 0.4rem 0.85rem;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      color: var(--text);
+      background: var(--bg-card);
+      transition: border-color 0.25s, color 0.25s, background 0.25s;
+    }
+    .skill-pills span:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-dim);
+    }
 
-      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
-        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
-          Hey there!
-        </h1>
-        
-          <h2 class="fw1 f5 f3-l white-80 measure-wide-l center mt3">
-            I am Chakshu, Welcome to my portfolio website.
-          </h2>
-        
-      </div>
-    </div>
-  </header>
+    /* --- CONTACT --- */
+    #contact { text-align: center; padding-bottom: 4rem; }
+    #contact .section-label { justify-content: center; }
+    #contact .section-label::after { display: none; }
+    .contact-heading {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      color: var(--text-bright);
+      margin-bottom: 1.2rem;
+    }
+    .contact-text {
+      max-width: 480px;
+      margin: 0 auto 2rem;
+      color: var(--text);
+      font-size: 1rem;
+    }
+    .contact-email {
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      padding: 0.85rem 2.5rem;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      background: transparent;
+      border-radius: 3px;
+      display: inline-block;
+      transition: background 0.3s, color 0.3s;
+      cursor: pointer;
+    }
+    .contact-email:hover {
+      background: var(--accent-dim);
+      opacity: 1;
+    }
 
+    /* --- FOOTER --- */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+    }
+    footer p {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+    footer a { color: var(--accent); }
 
-    <main class="pb7" role="main">
-      
- <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
-    <p><a href="https://drive.google.com/file/d/1HRl4XUBFKm9pk-QIOHOVtIzkicLSAQCQ/view?usp=sharing"><img src="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/images/resume.png" alt="Resume"></a><br>
-Through this website, you can go through my current and past projects/work experiences and also contact me, would like to hear from you :)<br>
-Mentioned below are some of my recent projects.</p>
+    /* --- SCROLL ANIMATIONS --- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-  </article>
-  
-  
-  
-  
-  
-  
-  
-    
-    
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-    <div class="pa3 pa4-ns w-100 w-70-ns center">
-      
-       
-          <h1 class="flex-none">
-            Recent Projects
-          </h1>
-        
+    /* --- MOBILE NAV --- */
+    .nav-toggle {
+      display: none;
+      background: none; border: none; cursor: pointer;
+      padding: 4px;
+    }
+    .nav-toggle span {
+      display: block; width: 22px; height: 1.5px;
+      background: var(--text-muted);
+      margin: 5px 0;
+      transition: all 0.3s;
+    }
+    .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+    .nav-toggle.active span:nth-child(2) { opacity: 0; }
+    .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-      
+    /* --- RESPONSIVE --- */
+    @media (max-width: 768px) {
+      .container { padding: 0 1.5rem; }
+      section { padding: 5rem 0; }
 
-      <section class="w-100 mw8">
-        
-        
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-          
-        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
-          <a href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-6/" class="db grow">
-            <img src="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/images/Nerf.gif" class="img" alt="image from 3D-Reconstruction">
+      .nav-toggle { display: block; }
+      nav ul {
+        position: fixed; top: 0; right: 0;
+        width: 70vw; max-width: 300px; height: 100vh;
+        flex-direction: column; justify-content: center; align-items: center;
+        background: var(--bg-elevated);
+        gap: 2.5rem;
+        transform: translateX(100%);
+        transition: transform 0.35s ease;
+        border-left: 1px solid var(--border);
+      }
+      nav ul.open { transform: translateX(0); }
+      nav ul li a { font-size: 0.85rem; }
+
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .timeline-header { flex-direction: column; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-name { font-size: 2.2rem; }
+      .hero-title { font-size: 1.3rem; }
+      .container { padding: 0 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <span class="logo">CD</span>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Chakshu Dhannawat.</h1>
+        <h2 class="hero-title">AI Engineer.</h2>
+        <p class="hero-tagline">Building intelligent systems&hairsp;&mdash;&hairsp;from RAG pipelines and multi-agent orchestration to fine-tuned LLMs. Currently at <strong style="color:var(--accent)">Otsuka Corporation</strong>, Tokyo.</p>
+        <div class="hero-links">
+          <a href="https://github.com/chakshu-dhannawat" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/chakshu-dhannawat/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="mailto:chakshu.dhannawat1@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
           </a>
         </div>
-      
-      <div class="blah w-100 w-60-ns pl3-ns">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-6/" class="color-inherit dim link">
-            3D-Reconstruction
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          This is not a finished project, instead something which I have worked on. I had researched various algorithms for 3d reconstruction. The different algorithms implemented were:
- NeRF, Used multiple 2d images of a object and also the camera angles/poses at which the 2d images were captured to generate a single 3d object. PIFuHD from facebook. Used to create 3d models from single human images.  You can find more similar repositories on my github profile.
-        </div>
-          <a href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-6/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
       </div>
     </div>
-  </div>
-</article>
+  </section>
 
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label reveal">About</div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>I'm an AI Engineer at <strong>Otsuka Corporation</strong> in Tokyo, where I design and deploy production LLM systems&hairsp;&mdash;&hairsp;RAG chatbots, multi-agent pipelines, and fine-tuned models serving thousands of users.</p>
+          <p>I graduated from the <strong>Indian Institute of Technology, Jodhpur</strong> with a B.Tech in Artificial Intelligence &amp; Data Science (Department Rank 2), specializing in Computer Vision. My work spans the full ML lifecycle: from data curation and model training to evaluation and deployment.</p>
+          <p>Beyond engineering, I'm a <strong>FIDE-rated chess player</strong> (1551) and hold a <strong>Japanese language certification</strong> (NAT-TEST 5Q).</p>
+        </div>
+        <div class="about-highlights reveal">
+          <div class="highlight-item">
+            <span class="num">Rank 2</span>
+            <span class="label">Department Rank<br>IIT Jodhpur, AI&DS</span>
           </div>
-        
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-          
-        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
-          <a href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-3/" class="db grow">
-            <img src="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/images/Bitcoin.png" class="img" alt="image from Bitcoin Price Prediction">
-          </a>
+          <div class="highlight-item">
+            <span class="num">9.25</span>
+            <span class="label">Specialization GPA<br>Computer Vision</span>
+          </div>
+          <div class="highlight-item">
+            <span class="num">10+</span>
+            <span class="label">LLMs fine-tuned<br>SFT, RLHF, LoRA</span>
+          </div>
+          <div class="highlight-item">
+            <span class="num">1000+</span>
+            <span class="label">Monthly users<br>RAG systems served</span>
+          </div>
         </div>
-      
-      <div class="blah w-100 w-60-ns pl3-ns">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-3/" class="color-inherit dim link">
-            Bitcoin Price Prediction
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          I was interested in algorithmic trading, and thus started tish project to understand how well Machine Learning can be used to predict future values of stocks/cryptocurrency. This project involved implementing various algorithms for predicting future prizes of Bitcoin. Since Bitcoin price is volatile and has a lot of variation, I was not able to get good results at first, but after using models having complex architecture, and having attention mechanisms, I was able to develop models which gave good results.
-        </div>
-          <a href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-3/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
       </div>
     </div>
-  </div>
-</article>
+  </section>
 
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-label reveal">Experience</div>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-header">
+            <span class="timeline-role">AI Engineer &middot; <span class="company">Otsuka Corporation</span></span>
+            <span class="timeline-date">Oct 2024 &mdash; Present</span>
           </div>
-        
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-          
-        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
-          <a href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-7/" class="db grow">
-            <img src="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/images/progress.jpg" class="img" alt="image from ML-Experimentation">
-          </a>
+          <div class="timeline-location">Tokyo, Japan</div>
+          <ul class="timeline-bullets">
+            <li>Built and deployed <strong>RAG chatbots</strong> on the ELK stack, improving retrieval accuracy by 31%, cutting search time by ~23%, and serving 1,000+ monthly users.</li>
+            <li>Scaled quotation/FAQ assistants with vector + hybrid search and light <strong>multi-agent orchestration</strong> (memory + planning); automated 60% of routine queries.</li>
+            <li>Executed <strong>LLM fine-tuning</strong> (SFT, instruction tuning, RLHF) on 10+ LLMs using LoRA/QLoRA across multi-node on-prem GPUs; validated with standardized benchmarks.</li>
+          </ul>
         </div>
-      
-      <div class="blah w-100 w-60-ns pl3-ns">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-7/" class="color-inherit dim link">
-            ML-Experimentation
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          This is also not a project, but instead a collection of google colab notebooks, where I try to test the recenly released machine learning models such as DALLE-2, Imagen, Language models such as BLOOM,GPT-3 etc. I will be adding many more google colab files into this github repository in the future. This repository contains the experimentation that I will perform on the recent advancements in AI. Mostly related to the recent research papers released in the community, and the machine learning models that have become quite popular.
+
+        <div class="timeline-item reveal">
+          <div class="timeline-header">
+            <span class="timeline-role">Data Scientist &middot; <span class="company">Laika AI</span></span>
+            <span class="timeline-date">Jun &mdash; Sep 2024</span>
+          </div>
+          <div class="timeline-location">Remote</div>
+          <ul class="timeline-bullets">
+            <li>Architected a <strong>multimodal LLM chatbot</strong> (text + on-demand charts) and custom blockchain tools using AutoGen; improved task completion by ~13%.</li>
+            <li>Refined data access patterns and caching with <strong>Redis</strong>, cutting external API calls by ~20%.</li>
+          </ul>
         </div>
-          <a href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-7/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
+
+        <div class="timeline-item reveal">
+          <div class="timeline-header">
+            <span class="timeline-role">AI Engineer Intern &middot; <span class="company">Otsuka Corporation</span></span>
+            <span class="timeline-date">Jun &mdash; Jul 2023</span>
+          </div>
+          <div class="timeline-location">Tokyo, Japan</div>
+          <ul class="timeline-bullets">
+            <li>Piloted an <strong>LLM agent simulation</strong> (movement, planning, interaction, memory) with a 5-member team, increasing long-horizon task completion.</li>
+            <li>Designed an <strong>evaluation pipeline</strong> scoring plans and actions on success, safety, and latency with tracing and replay.</li>
+          </ul>
+        </div>
+
       </div>
     </div>
-  </div>
-</article>
+  </section>
 
-          </div>
-        
-      </section>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label reveal">Projects</div>
 
-      
-      <section class="w-100">
-        <h1 class="f3">More</h1>
-        
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-5/" class="link black dim">
-              Multithreaded-Server Perfromance Evaluation
+      <div class="project-card reveal">
+        <div class="project-top">
+          <span class="project-year">2025</span>
+          <span class="project-link">
+            <a href="https://github.com/chakshu-dhannawat/Data-Augmentor" target="_blank" rel="noopener" aria-label="View on GitHub">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-4/" class="link black dim">
-              Quantum Machine Learning
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-1/" class="link black dim">
-              Retinal Image Analysis
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/chapter-2/" class="link black dim">
-              Toxic Comment Classification
-            </a>
-          </h2>
-        
-
-        
-        
-          <a href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/post/" class="link db f6 pa2 br3 bg-mid-gray white dim w4 tc">All Projects</a>
-        
-        </section>
-      
-
+          </span>
+        </div>
+        <h3 class="project-name">LLM-Driven SFT & Alignment Dataset Builder</h3>
+        <p class="project-desc">A toolkit that converts Markdown notes into structured SFT/RLHF datasets with LLM-guided chunking and validation. Modular pipeline&hairsp;&mdash;&hairsp;Chunker, QA Generator, Validator&hairsp;&mdash;&hairsp;synthesizes multi-turn QA and ORPO-style preference pairs with quality gates and deduplication.</p>
+        <div class="project-tags">
+          <span>LLM</span><span>SFT</span><span>RLHF</span><span>Data Pipeline</span><span>Fine-tuning</span>
+        </div>
       </div>
-  
 
-    </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://chakshu-dhannawat.github.io/Chakshu-Portfolio/" >
-    &copy;  Chakshu Dhannawat 2022 
-  </a>
-    <div>
-<div class="ananke-socials">
-  
-    <a href="https://www.linkedin.com/in/chakshu-dhannawat/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
-      
-        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
-</svg>
-</span>
-      
-<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
-<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
-</svg>
-</span></a>
-  
-    <a href="https://github.com/chakshu-dhannawat" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
-      
-        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
-  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
-</svg>
-</span>
-      
-<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
-<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
-</svg>
-</span></a>
-  
-</div>
-</div>
-  </div>
-</footer>
+      <div class="project-card reveal">
+        <div class="project-top">
+          <span class="project-year">2022 &mdash; 2024</span>
+          <span class="project-link">
+            <a href="https://github.com/chakshu-dhannawat/Retinal-Image-Analysis" target="_blank" rel="noopener" aria-label="View on GitHub">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </span>
+        </div>
+        <h3 class="project-name">Retinal Disease Detection</h3>
+        <p class="project-desc">Research project delivering a retinal disease detection pipeline&hairsp;&mdash;&hairsp;vessel segmentation, enhancement, and multi-disease classification. Evaluated CNNs (VGG16, ResNet50, DenseNet) and Vision Transformers (ViT, Swin, EfficientFormer) with Grad-CAM interpretability.</p>
+        <div class="project-tags">
+          <span>Computer Vision</span><span>CNNs</span><span>Vision Transformers</span><span>Grad-CAM</span><span>Research</span>
+        </div>
+      </div>
 
-  </body>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-label reveal">Skills</div>
+      <div class="skills-grid">
+        <div class="skill-group reveal">
+          <h3>Programming</h3>
+          <div class="skill-pills">
+            <span>Python</span><span>C</span><span>C++</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>ML / AI</h3>
+          <div class="skill-pills">
+            <span>PyTorch</span><span>TensorFlow</span><span>LangChain</span><span>MCP</span><span>AutoGen</span><span>CrewAI</span><span>Hugging Face</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Databases</h3>
+          <div class="skill-pills">
+            <span>Elasticsearch</span><span>PostgreSQL</span><span>MongoDB</span><span>MySQL</span><span>Neo4j</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>MLOps & Infra</h3>
+          <div class="skill-pills">
+            <span>Docker</span><span>Kubernetes</span><span>MLflow</span><span>LangFuse</span><span>DeepEval</span><span>AWS</span><span>Azure</span><span>Azure AI Foundry</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label reveal">What's Next?</div>
+      <h2 class="contact-heading reveal">Get In Touch</h2>
+      <p class="contact-text reveal">I'm always open to discussing AI engineering, research collaborations, or interesting opportunities. Feel free to reach out.</p>
+      <a class="contact-email reveal" href="mailto:chakshu.dhannawat1@gmail.com">Say Hello</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Designed &amp; built by <a href="https://github.com/chakshu-dhannawat" target="_blank" rel="noopener">Chakshu Dhannawat</a></p>
+  </footer>
+
+  <script>
+    // --- Scroll reveal ---
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => observer.observe(el));
+
+    // --- Nav hide/show on scroll ---
+    let lastScroll = 0;
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      const curr = window.scrollY;
+      if (curr > lastScroll && curr > 80) nav.classList.add('hidden');
+      else nav.classList.remove('hidden');
+      lastScroll = curr;
+    }, { passive: true });
+
+    // --- Mobile nav toggle ---
+    const toggle = document.querySelector('.nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+  </script>
+
+</body>
 </html>
