@@ -252,64 +252,10 @@
       font-size: 0.75rem;
     }
 
-    /* --- PROJECTS --- */
-    .project-card {
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 2rem;
-      margin-bottom: 1.5rem;
-      background: var(--bg-card);
-      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-      position: relative;
-    }
-    .project-card:hover {
-      border-color: var(--accent-mid);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-    }
-    .project-top {
-      display: flex; justify-content: space-between; align-items: flex-start;
-      margin-bottom: 1rem;
-    }
-    .project-year {
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      color: var(--accent);
-      letter-spacing: 0.1em;
-    }
-    .project-link a {
-      color: var(--text-muted);
-      transition: color 0.25s;
-    }
-    .project-link a:hover { color: var(--accent); opacity: 1; }
-    .project-link svg { width: 18px; height: 18px; }
-    .project-name {
-      font-size: 1.2rem;
-      font-weight: 500;
-      color: var(--text-bright);
-      margin-bottom: 0.8rem;
-    }
-    .project-desc {
-      font-size: 0.95rem;
-      color: var(--text);
-      margin-bottom: 1.2rem;
-      line-height: 1.75;
-    }
-    .project-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .project-tags span {
-      font-family: var(--mono);
-      font-size: 0.65rem;
-      letter-spacing: 0.05em;
-      padding: 0.3rem 0.7rem;
-      background: var(--accent-dim);
-      color: var(--accent);
-      border-radius: 3px;
-    }
-
     /* --- SKILLS --- */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
     }
     .skill-group h3 {
@@ -437,7 +383,7 @@
       nav ul li a { font-size: 0.85rem; }
 
       .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .skills-grid { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: 1fr 1fr; }
       .timeline-header { flex-direction: column; }
     }
 
@@ -459,7 +405,6 @@
     <ul id="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -567,46 +512,6 @@
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="container">
-      <div class="section-label reveal">Projects</div>
-
-      <div class="project-card reveal">
-        <div class="project-top">
-          <span class="project-year">2025</span>
-          <span class="project-link">
-            <a href="https://github.com/chakshu-dhannawat/Data-Augmentor" target="_blank" rel="noopener" aria-label="View on GitHub">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </span>
-        </div>
-        <h3 class="project-name">LLM-Driven SFT & Alignment Dataset Builder</h3>
-        <p class="project-desc">A toolkit that converts Markdown notes into structured SFT/RLHF datasets with LLM-guided chunking and validation. Modular pipeline&hairsp;&mdash;&hairsp;Chunker, QA Generator, Validator&hairsp;&mdash;&hairsp;synthesizes multi-turn QA and ORPO-style preference pairs with quality gates and deduplication.</p>
-        <div class="project-tags">
-          <span>LLM</span><span>SFT</span><span>RLHF</span><span>Data Pipeline</span><span>Fine-tuning</span>
-        </div>
-      </div>
-
-      <div class="project-card reveal">
-        <div class="project-top">
-          <span class="project-year">2022 &mdash; 2024</span>
-          <span class="project-link">
-            <a href="https://github.com/chakshu-dhannawat/Retinal-Image-Analysis" target="_blank" rel="noopener" aria-label="View on GitHub">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </span>
-        </div>
-        <h3 class="project-name">Retinal Disease Detection</h3>
-        <p class="project-desc">Research project delivering a retinal disease detection pipeline&hairsp;&mdash;&hairsp;vessel segmentation, enhancement, and multi-disease classification. Evaluated CNNs (VGG16, ResNet50, DenseNet) and Vision Transformers (ViT, Swin, EfficientFormer) with Grad-CAM interpretability.</p>
-        <div class="project-tags">
-          <span>Computer Vision</span><span>CNNs</span><span>Vision Transformers</span><span>Grad-CAM</span><span>Research</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
   <!-- SKILLS -->
   <section id="skills">
     <div class="container">
@@ -615,25 +520,37 @@
         <div class="skill-group reveal">
           <h3>Programming</h3>
           <div class="skill-pills">
-            <span>Python</span><span>C</span><span>C++</span>
+            <span>Python</span><span>C</span><span>C++</span><span>Bash</span><span>SQL</span>
           </div>
         </div>
         <div class="skill-group reveal">
-          <h3>ML / AI</h3>
+          <h3>LLMs & Agents</h3>
           <div class="skill-pills">
-            <span>PyTorch</span><span>TensorFlow</span><span>LangChain</span><span>MCP</span><span>AutoGen</span><span>CrewAI</span><span>Hugging Face</span>
+            <span>LangChain</span><span>LlamaIndex</span><span>MCP</span><span>AutoGen</span><span>CrewAI</span><span>Hugging Face</span><span>vLLM</span><span>LoRA / QLoRA</span><span>RLHF</span><span>RAG</span>
           </div>
         </div>
         <div class="skill-group reveal">
-          <h3>Databases</h3>
+          <h3>ML / Deep Learning</h3>
           <div class="skill-pills">
-            <span>Elasticsearch</span><span>PostgreSQL</span><span>MongoDB</span><span>MySQL</span><span>Neo4j</span>
+            <span>PyTorch</span><span>TensorFlow</span><span>scikit-learn</span><span>OpenCV</span><span>NumPy</span><span>Pandas</span><span>Weights & Biases</span>
           </div>
         </div>
         <div class="skill-group reveal">
-          <h3>MLOps & Infra</h3>
+          <h3>Cloud & MLOps</h3>
           <div class="skill-pills">
-            <span>Docker</span><span>Kubernetes</span><span>MLflow</span><span>LangFuse</span><span>DeepEval</span><span>AWS</span><span>Azure</span><span>Azure AI Foundry</span>
+            <span>AWS</span><span>Amazon Bedrock</span><span>Amazon SageMaker</span><span>GCP</span><span>Vertex AI</span><span>Azure</span><span>Azure AI Foundry</span><span>MLflow</span><span>LangFuse</span><span>DeepEval</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Databases & Search</h3>
+          <div class="skill-pills">
+            <span>Elasticsearch</span><span>PostgreSQL</span><span>MongoDB</span><span>Redis</span><span>Neo4j</span><span>MySQL</span><span>FAISS</span><span>ChromaDB</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Infrastructure</h3>
+          <div class="skill-pills">
+            <span>Docker</span><span>Kubernetes</span><span>Git</span><span>Linux</span><span>CI/CD</span><span>Nginx</span>
           </div>
         </div>
       </div>
