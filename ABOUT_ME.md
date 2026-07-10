@@ -24,24 +24,39 @@
 
 ## Professional Experience
 
-### 1. AI Engineer — Otsuka Corporation (Full Time)
-- **Location:** Tokyo, Japan
+### 1. AI Engineer — Otsuka Corporation (株式会社大塚商会) (Full Time)
+- **Location:** Tokyo, Japan (On-site)
 - **Duration:** Oct 2024 — Present
 - Built and deployed **RAG chatbots** on the **ELK stack**, improving retrieval accuracy by **31%**, cutting search time by **~23%**, and serving **1,000+** monthly users.
 - Scaled quotation/FAQ assistants with vector + hybrid search and light **multi-agent** orchestration (memory + planning); automated **60%** of routine queries and reduced manual workload for internal teams.
 - Executed **LLM fine-tuning** (SFT, instruction tuning, **RLHF**) on **10+ LLMs** using **LoRA/QLoRA** across **multi-node on-prem GPUs**; validated performance with standardized benchmarks.
+- Working with **Knowledge Graphs** and **Vector Databases** for RAG chatbots and recommendations; improving search capabilities with **Elasticsearch**.
 
 ### 2. Data Scientist — Laika AI (Internship)
 - **Location:** Remote
 - **Duration:** Jun 2024 — Sep 2024
 - Architected and deployed a **multimodal LLM chatbot** (text + on-demand charts), and custom tools for blockchain support using **AutoGen**; improved successful task completion by **~13%** on internal benchmarks.
 - Refined data access patterns and caching strategies utilizing **Redis** to cut external API calls by **~20%**.
+- Optimized system performance, achieving a **50% reduction in chatbot response time**.
+- Built custom agent tools, including **dynamic chart generation** for visualizing historical blockchain coin data.
 
-### 3. AI Engineer — Otsuka Corporation (Internship)
+### 3. AI Intern — Otsuka Corporation (Internship)
 - **Location:** Tokyo, Japan
-- **Duration:** Jun 2023 — Jul 2023
-- Collaborated with a **5-member team** to pilot an **LLM agent simulation** (movement, planning, interaction, memory), increasing long-horizon task completion and plan consistency on internal scenarios.
-- Designed an **evaluation pipeline** scoring plans/actions (success, safety, latency) with tracing/replay; improved prompt strategy to reduce planning errors and raise task success in follow-up runs.
+- **Duration:** Jun 2023 — Aug 2023
+- Created a project to simulate interactive conversations between multiple AI agents, based on the **Werewolves of Miller Hollow** game scenario.
+- Developed a system that allows AI agents to **plan, act, and converse in real time**, improving their ability to interact naturally.
+- Built an application to enable **group conversations with multiple AI agents**.
+- Designed an **evaluation pipeline** scoring plans/actions (success, safety, latency) with tracing/replay.
+
+### 4. Teaching Assistant — Dept. of CSE, IIT Jodhpur
+- **Duration:** Aug 2022 — May 2023 (two courses)
+- **Pattern Recognition and Machine Learning** (Jan 2023 — May 2023): teaching and assessment activities for 250+ students.
+- **Introduction to Machine Learning** (Aug 2022 — Dec 2022): teaching and assessment activities for 250+ students.
+
+### 5. Machine Learning Intern — Deep Learn Strategies Limited (Internship)
+- **Location:** Remote
+- **Duration:** Jun 2022 — Jul 2022
+- Implemented various ML models related to **3D reconstruction**, **Temporal Fusion Transformers**, and **face spoofing detection**.
 
 ---
 
