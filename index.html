@@ -84,6 +84,18 @@
     }
     .cmd .caret { color: var(--on-dark-faint); margin-right: 8px; }
 
+    /* Blinking CLI cursor */
+    .cursor {
+      display: inline-block;
+      width: 8px; height: 1.05em;
+      background: var(--coral);
+      margin-left: 7px;
+      vertical-align: text-bottom;
+      animation: blink 1.1s steps(1) infinite;
+    }
+    .terminal .cursor { background: var(--on-dark-soft); }
+    @keyframes blink { 50% { opacity: 0; } }
+
     /* ---------- Buttons ---------- */
     .btn {
       display: inline-flex; align-items: center; justify-content: center;
@@ -313,6 +325,7 @@
       .reveal { opacity: 1; transform: none; transition: none; }
       .terminal .t-line { visibility: visible !important; }
       .terminal .live .pulse { animation: none; }
+      .cursor { animation: none; }
     }
 
     /* ---------- Responsive ---------- */
@@ -369,7 +382,7 @@
   <section id="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <span class="cmd"><span class="caret">❯</span>chakshu · ai engineer · tokyo</span>
+        <span class="cmd"><span class="caret">❯</span>chakshu · ai engineer · tokyo<span class="cursor" aria-hidden="true"></span></span>
         <h1 class="display-xl">Hello, I'm <em>Chakshu</em>.</h1>
         <p class="hero-sub">I'm an AI engineer at <strong>Otsuka Corporation</strong> in Tokyo. I build RAG pipelines, multi-agent assistants, and fine-tuned LLMs that people use every day.</p>
         <div class="hero-actions">
@@ -400,6 +413,7 @@
           <div class="t-line metric"><span class="ok">✓</span> search latency&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>−23%</b></div>
           <div class="t-line metric"><span class="ok">✓</span> queries automated&nbsp;&nbsp;&nbsp;<b>60%</b></div>
           <div class="t-line live"><span class="pulse"></span>running in production · Tokyo, JP</div>
+          <div class="t-line"><span class="prompt">$</span><span class="cursor" aria-hidden="true"></span></div>
         </div>
       </div>
     </div>
