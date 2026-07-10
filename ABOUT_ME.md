@@ -15,8 +15,8 @@
 
 | Degree/Certificate | Institute/Board | CGPA/Percentage | Year |
 |---|---|---|---|
-| B.Tech - AI & Data Science | IIT Jodhpur | 8.45/10 (Department Rank: 2) | 2020-2024 |
-| Specialization: Computer Vision | IIT Jodhpur | 9.25/10 | 2020-2024 |
+| B.Tech - AI & Data Science | IIT Jodhpur | — | 2020-2024 |
+| Specialization: Computer Vision | IIT Jodhpur | — | 2020-2024 |
 | Senior Secondary (HSC) | HSC Board | 87.85% | 2020 |
 | Secondary (ICSE) | ICSE Board | 96.83% | 2018 |
 
